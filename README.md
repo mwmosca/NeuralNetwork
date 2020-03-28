@@ -3,6 +3,6 @@ This repository contains code from a personal project in the field of neural net
 
 The code was written using the C++ Standard Library and compiled with Visual C++ 14.2. The only exception is a simple function that displays MNIST images using OpenCV libraries. This has been commented out of the source code for accessibility.
 
-# To-Do
+## To-Do
 * Enable GPU computation
 * Enable convolutional layers
