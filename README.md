@@ -7,7 +7,7 @@ This repository contains code from a personal project in the field of neural net
 - learning rate 
 - regularization parameter
 
-The user may choose to train multiple networks with the indicated hyperparameters. After the networks are trained and tested the following model metrics are reported:
+Neural networks with the same hyperparameters may demonstrate different performance after training. This results from the randomization associated with initializing connection weights in the networks and the order in which training data is fed into the networks. Users may select the number of networks to train so they may assess how performance can vary. After the networks are trained and tested the following model metrics are reported:
 - maximum accuracy among all models
 - mean training time
 - mean accuracy
@@ -36,11 +36,11 @@ neuralnetwork.exe [-topology n1 [n2…]] [-batch_size b] [-n_epochs e] [-learnin
 
 (default n_epochs is 1)
 
--learning_rate lr: a positive number that functions as a multiplier for the weight gradients before the connection weights are updated
+-learning_rate lr: a positive number that serves as a multiplier for the weight gradient for each connection weight in the network
 
-(default learning_rate is 0.0001)
+(default learning_rate is 0.0002)
 
--regularization_parameter rp: a non-negative number that functions as a multiplier for the regularization component of the weight gradients before the connection weights are updated
+-regularization_parameter rp: a non-negative number that serves as a multiplier for the regularization component of the weight gradient for each connection weight in the network
 
 (default regularization_parameter is 0.0)
 
@@ -48,7 +48,9 @@ neuralnetwork.exe [-topology n1 [n2…]] [-batch_size b] [-n_epochs e] [-learnin
 
 (default n_networks is 1)
 
+The default network configuration is intended to be a simple demonstration. The parameters were chosen in the interest of a low network training time. Testing has shown an accuracy up to 85% is achievable with this configuration. Higher accuracies may be obtained with experimentation.
+
 
 ## To-Do
-- [ ] Enable GPU computation
-- [ ] Enable convolutional layers
+- [ ] Enable GPU computation - to improve training times
+- [ ] Enable convolutional layers - to improve classification accuracy
