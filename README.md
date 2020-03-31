@@ -13,7 +13,7 @@ Neural networks with the same hyperparameters may demonstrate different performa
 - mean accuracy
 - mean processing time
 
-The code was written using the C++ Standard Library. The only exception is a simple function that displays MNIST images using OpenCV libraries. This has been commented out of the source code for accessibility. The code was compiled with Visual C++ 14.2.
+The code was written using the C++ Standard Library. The only exception is a simple function that displays MNIST images using [OpenCV libraries](https://opencv.org/). This has been commented out of the source code for accessibility. The code was compiled with Visual C++ 14.2.
 
 ## Usage
 ### Default:
