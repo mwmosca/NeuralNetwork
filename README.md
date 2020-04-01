@@ -50,6 +50,7 @@ neuralnetwork.exe [-topology n1 [n2…]] [-batch_size b] [-n_epochs e] [-learnin
 
 The default network configuration is intended to be a simple demonstration. The parameters were chosen in the interest of a low network training time. Testing has shown an accuracy up to 85% is achievable with this configuration. Higher accuracies may be obtained with experimentation.
 
+Before running the executable, the MNIST files must be extracted and placed in the executable's directory.
 
 ## To-Do
 - [ ] Enable GPU computation - to improve training times
