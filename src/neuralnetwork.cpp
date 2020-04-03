@@ -14,10 +14,10 @@
 // #include <opencv2/core.hpp>
 // #include <opencv2/opencv.hpp>
 
-#include "MnistData.cpp"
-#include "Network.cpp"
-#include "Neuron.cpp"
-#include "Timer.cpp"
+#include "MnistData.h"
+#include "Network.h"
+#include "Neuron.h"
+#include "Timer.h"
 
 static void help()
 {
@@ -366,7 +366,7 @@ int main(const int argc, const char** argv)
 
     const unsigned numNetworks = inputNumNetworks;  // The number of networks to be trained
     unsigned networksRemaining = numNetworks;       // A count of the number of networks that still need to be trained.
-                                                    // Used for output to the console.
+                                                    //     Used for output to the console.
 
     // The networks to be trained
     std::vector<Network> myNetworks;

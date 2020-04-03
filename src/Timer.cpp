@@ -1,5 +1,3 @@
-#pragma once
-
 #include <chrono>
 #include <iostream>
 
@@ -23,6 +21,9 @@ void Timer::stop()
     long duration = end - start;        // microseconds
     double ms = duration * 0.001;       // milliseconds
     double s = duration * 0.000001;     // seconds
+    
+    // Output the time span to the console at the end of scope
+    // std::cout << s << " seconds" << std::endl;    
 }
 
 double Timer::getElapsedSeconds() const
