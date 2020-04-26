@@ -1,5 +1,5 @@
 # NeuralNetwork
-This repository contains code from a personal project in the field of neural networks. The code allows users to experiment with training a fully connected neural network to be a classifier for images from the [MNIST database](http://yann.lecun.com/exdb/mnist/). The network has 784 inputs (the number of pixels in each image (28x28)) and 10 outputs (from one-hot encoding each digit from 0 to 9). Users may set the following network hyperparameters:
+This repository contains code that allows users to experiment with training a fully connected neural network to be a classifier for images of digits from the [MNIST database](http://yann.lecun.com/exdb/mnist/). The network has 784 inputs (the number of pixels in each 28x28 image) and 10 outputs (from one-hot encoding each digit from 0 to 9). Users may set the following network hyperparameters:
 - number of hidden layers
 - number of neurons in each hidden layer
 - batch size
@@ -9,11 +9,11 @@ This repository contains code from a personal project in the field of neural net
 
 Neural networks with the same hyperparameters may demonstrate different performance after training. This results from the randomization associated with initializing connection weights in the networks and the order in which training data is fed into the networks. Users may select the number of networks to train so they may assess how performance can vary. After the networks are trained and tested the following model metrics are reported:
 - maximum accuracy among all models
-- mean training time
 - mean accuracy
+- mean training time
 - mean processing time
 
-The code was written using the C++ Standard Library. The only exception is a simple function that displays MNIST images using [OpenCV libraries](https://opencv.org/). This has been commented out of the source code for accessibility. The code was compiled with Visual C++ 14.2.
+The code was written using the C++17 standard and compiled with Visual C++ 14.2.
 
 ## Usage
 ### Default:
