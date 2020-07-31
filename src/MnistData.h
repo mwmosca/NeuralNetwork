@@ -4,11 +4,13 @@
 
 class MnistData
 {
+    // Description:
     // The purpose of this class is to read in label and image data from the MNIST database.
-    // The singleton design pattern was chosen because only one instance of the data will be necessary.
     // For more information on the MNIST file format visit http://yann.lecun.com/exdb/mnist/ .
 
-private:
+    // Design Pattern:  Singleton
+
+  private:
     bool m_dataValid = false;
     std::vector<std::vector<double>> m_trainingLabels;
     std::vector<std::vector<double>> m_trainingImages;
@@ -17,7 +19,7 @@ private:
     std::vector<double> m_dataMean;
     std::vector<double> m_dataStdDev;
 
-public:
+  public:
     ~MnistData() = default;
 
     MnistData(const MnistData&)            = delete;
@@ -26,7 +28,7 @@ public:
     MnistData& operator=(MnistData&&)      = delete;
 
     // Allows access to a single instance of the class
-    static const MnistData& get() { static const MnistData instance; return instance; }
+    static const MnistData& getInstance() { static const MnistData instance; return instance; }
 
     constexpr bool                                    getDataValid() const { return m_dataValid; }
     constexpr const std::vector<std::vector<double>>& getTrainingLabels() const { return m_trainingLabels; }
@@ -34,7 +36,7 @@ public:
     constexpr const std::vector<double>&              getTestLabels() const { return m_testLabels; }
     constexpr const std::vector<std::vector<double>>& getTestImages() const { return m_testImages; }
 
-private:
+  private:
     MnistData();    // Make constructor inaccessible outside of class
     
     enum class DataSet : char   // Used to differentiate between the training data and test data

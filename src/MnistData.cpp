@@ -46,8 +46,6 @@ MnistData::MnistData()
     std::cout << "MNIST data pre-processed!\n" << std::endl;
 
     m_dataValid = true;
-
-    return;
 }
 
 bool MnistData::readLabelFile(const DataSet dataSetFlag)
